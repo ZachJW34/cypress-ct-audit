@@ -2,13 +2,18 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+function throwError() {
+  throw new Error('uh oh')
+}
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <button onClick={throwError}>Throw Error</button>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to reload!
         </p>
         <a
           className="App-link"

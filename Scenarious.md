@@ -37,4 +37,4 @@
 
 | Framework | DevServer | Error-Type | Outcome |
 | --------- | --------- | ---------- | ------- |
-| create-react-app | | |
+| create-react-app | webpack | Onboarding (types) | [cra types](./create-react-app/onboarding-types.png) Cypress types aren't detected out of the box and their are Jest conflicts  |
