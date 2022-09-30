@@ -19,8 +19,7 @@ describe("Scenarios", () => {
   //   }
   // })
   // it('typescript error', () => {
-  //   // Angular will fix small mistakes?!?!?!?! (){} gets converted to () => {}
-  //   let thing = ()/(={}
+  //   {}/()aa>
   //   cy.mount(AppComponent);
   // })
   // it('runtime error in spec', () => {

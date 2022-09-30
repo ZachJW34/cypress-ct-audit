@@ -21,7 +21,11 @@ it('eslint warning', () => {
 - `vue-cli`
   - Cypress: N/A ESLint is not integrated into Webpack build
   - In App: N/A ESLint is not integrated into Webpack build
-  
+
+- `Angular`
+  - Cypress: N/A ESLint is not integrated into build
+  - In App: N/A ESLint is not integrated into build
+
 ## ESLint Error
 
 ```ts
@@ -43,6 +47,10 @@ it('eslint error', () => {
 - `vue-cli`
   - Cypress: N/A ESLint is not integrated into Webpack build
   - In App: N/A ESLint is not integrated into Webpack build
+
+- `Angular`
+  - Cypress: N/A ESLint is not integrated into build
+  - In App: N/A ESLint is not integrated into build
 
 ## Typescript Warning
 
@@ -69,6 +77,11 @@ it('typescript warning', () => {
   - In App: Terminal Log, Deverver overlay
   > ![vue-cli-typescript-warning](vue-cli-typescript-warning.png)
 
+- `Angular`
+  - Cypress: Terminal log, Console log
+  - In App: Terminal log, DevServer overlay, live-reload/hmr does not work until error is resolved
+  > ![angular-typescript-warning](angular-typescript-warning.png)
+
 ## Typescript Error
 
 ```ts
@@ -93,6 +106,10 @@ it('typescript error', () => {
   - Cypress: Terminal Log, Console Log, Reporter Log, Failed Test
   - In App: Terminal log, Devserver overlay, live-reload/hmr does not work until error is resolved
   > ![vue-cli-typescript-error](vue-cli-typescript-error.png)
+- `Angular`
+  - Cypress: Terminal Log, Console Log, Reporter Log, Failed Test
+  - In App: Terminal log, Devserver overlay, live-reload/hmr does not work until error is resolved
+  > ![angular-typescript-error](angular-typescript-error.png)
 
 ## Runtime Error (Test)
 
@@ -114,6 +131,10 @@ it('runtime error in spec', () => {
 - `vue-cli`
   - Cypress: Error in reporter with code-frame, live-reload/hmr does not work until error is resolved, failed test
   > ![vue-cli-runtime-error-spec](vue-cli-runtime-error-spec.png)
+
+- `Angular`
+  - Cypress: Error in reporter with code-frame, live-reload/hmr does not work until error is resolved, failed test
+  > ![angular-runtime-error-spec](angular-runtime-error-spec.png)
 
 ## Runtime Error (App)
 
@@ -138,3 +159,8 @@ it("runtime error in component", () => {
   - Cypress: Console Log, Error in reporter with code-frame, Test Passes
   - In App: Console Log
   > ![vue-cli-runtime-error-app](vue-cli-runtime-error-app.png)
+
+- `Angular`
+  - Cypress: Console Log Test Passes
+  - In App: Console Log
+  > ![angular-runtime-error-app](angular-runtime-error-app.png)
