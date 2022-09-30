@@ -12,6 +12,10 @@ describe('Scenarios', () => {
   //   let thing = 'Hello World!';
   //   cy.mount(App)
   // })
+  // it('eslint error', () => {
+  //   let thing = 'Hello World!';
+  //   cy.mount(App)
+  // })
   // it('typescript warning', () => {
   //   let thing: number = 'Hello World'
   //   if (thing) {
@@ -19,10 +23,9 @@ describe('Scenarios', () => {
   //   }
   // })
   // it('typescript error', () => {
-  //   // Nuxt does not show this in the reporter
-  //   let thing = ()/(={}
+  //   {}/()aa>
   //   cy.mount(App);
-  // })
+  // // })
   // it('runtime error in spec', () => {
   //   throw new Error('uh oh')
   //   cy.mount(App);

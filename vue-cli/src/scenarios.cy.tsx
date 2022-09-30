@@ -20,7 +20,7 @@ describe("Scenarios", () => {
   // })
   // it('typescript error', () => {
   //   // Vue will fix small mistakes?!?!?!?! (){} gets converted to () => {}
-  //   let thing = ()/(={}
+  //   {}/()aa>
   //   cy.mount(App);
   // })
   // it('runtime error in spec', () => {

@@ -14,6 +14,14 @@ it('eslint warning', () => {
   - In App: Terminal log
   > ![](./create-react-app-eslint-warning.png)
 
+- `Nuxt`
+  - Cypress: N/A ESLint is not integrated into Webpack build
+  - In App: N/A ESLint is not integrated into Webpack build
+
+- `vue-cli`
+  - Cypress: N/A ESLint is not integrated into Webpack build
+  - In App: N/A ESLint is not integrated into Webpack build
+  
 ## ESLint Error
 
 ```ts
@@ -27,6 +35,14 @@ it('eslint error', () => {
   - Cypress: Terminal log
   - In App: Terminal log, DevServer overlay, live-reload/hmr does not work until error is resolved
   > ![](./create-react-app-eslint-error.png)
+
+- `nuxt` 
+  - Cypress: N/A ESLint is not integrated into Webpack build
+  - In App: Terminal Log
+
+- `vue-cli`
+  - Cypress: N/A ESLint is not integrated into Webpack build
+  - In App: N/A ESLint is not integrated into Webpack build
 
 ## Typescript Warning
 
@@ -43,6 +59,16 @@ it('typescript warning', () => {
   - In App: Terminal log, DevServer overlay
   > ![](./create-react-app-typescript-warning.png)
 
+- `nuxt`
+  - Cypress: Terminal log, Console log
+  - In App: Terminal log
+  > ![nuxt-typescript-warning](nuxt-typescript-warning.png)
+
+- `vue-cli`
+  - Cypress: Terminal log, Console log
+  - In App: Terminal Log, Deverver overlay
+  > ![vue-cli-typescript-warning](vue-cli-typescript-warning.png)
+
 ## Typescript Error
 
 ```ts
@@ -58,6 +84,16 @@ it('typescript error', () => {
   - In App: Terminal log, DevServer overlay, live-reload/hmr does not work until error is resolved
   > ![](./create-react-app-typescript-error.png)
 
+- `nuxt`
+  - Cypress: Terminal Log, Console Log, Reporter Log, Failed Test
+  - In App: Terminal Log, Devserver overlay, live-reload/hmr does not work until error is resolved
+  > ![nuxt-typescript-error](nuxt-typescript-error.png)
+
+- `vue-cli`
+  - Cypress: Terminal Log, Console Log, Reporter Log, Failed Test
+  - In App: Terminal log, Devserver overlay, live-reload/hmr does not work until error is resolved
+  > ![vue-cli-typescript-error](vue-cli-typescript-error.png)
+
 ## Runtime Error (Test)
 
 ```ts
@@ -70,6 +106,14 @@ it('runtime error in spec', () => {
 - `create-react-app`
   - Cypress: Error in reporter with code-frame, live-reload/hmr does not work until error is resolved, failed test
   > ![](./create-react-app-runtime-error-test.png)
+
+- `nuxt`
+  - Cypress: Error in reporter with code-frame, live-reload/hmr does not work until error is resolved, failed test
+  > ![nuxt-runtime-error-spec](nuxt-runtime-error-spec.png)
+
+- `vue-cli`
+  - Cypress: Error in reporter with code-frame, live-reload/hmr does not work until error is resolved, failed test
+  > ![vue-cli-runtime-error-spec](vue-cli-runtime-error-spec.png)
 
 ## Runtime Error (App)
 
@@ -84,3 +128,13 @@ it("runtime error in component", () => {
   - Cypress: Console log, Error in reporter with code-frame, failed test
   - In App: Console log
   > ![](./create-react-app-runtime-error-app.png)
+
+- `nuxt`
+  - Cypress: Console Log, Test Passes
+  - In App: DevServer Overlay, Console Log
+  > ![nuxt-runtime-error-app](nuxt-runtime-error-app.png)
+
+- `vue-cli`
+  - Cypress: Console Log, Error in reporter with code-frame, Test Passes
+  - In App: Console Log
+  > ![vue-cli-runtime-error-app](vue-cli-runtime-error-app.png)
