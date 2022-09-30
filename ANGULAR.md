@@ -131,6 +131,31 @@ describe('greeter.component.cy.ts', () => {
 
 ![](./error-4.png)
 
+# Comparison with End to End
+
+It's worth noting E2E is also inconsistent. 
+
+## TypeScript without `@cypress/webpack-preprocessor` - Invalid JS
+
+Error in Command Log.
+
+![](./e2e-2.png)
+
+## TypeScript without `@cypress/webpack-preprocessor` - Type Error
+
+No error (Command Log or console).
+
+## TypeScript with `@cypress/webpack-preprocessor` - Invalid JS
+
+Error in Command Log.
+
+![](./e2e-2.png)
+
+## TypeScript with `@cypress/webpack-preprocessor` - Type Error
+
+Error in overlay.
+
+![](./e2e-1.png)
 
 # Conclusion
 
@@ -143,9 +168,27 @@ Both categories have two type of coding error:
   - Invalid code. Example: `let foo const /*** string`
   - Incorrect types. Example: `const foo: string = 123`
 
-| Code | Type of Error | Current Behavior | Desired Behavior |
-| ----- | ---- | ---- | --- |
-| Test Code | Invalid JS | Typing Error | ... |
-| App Code | ... | ... | ... | 
+| Code | Type of Error | Current Behavior 
+| -- | -- | -- | 
+| App Code | Invalid JS | console.error | 
+| App Code | Typing Error | console.error |
+| Spec Code | Invalid JS | Command Log | 
+| Spec Code | Typing Error | console.error | 
+
+There is *three* places errors can manifest.
+
+1. Command Log
+2. console
+3. AUT overlay
+
+# Recommendations
+
+## Invalid JS errors (eg, the code cannot be executed):
+
+I'd recommend following End to End Testing's current pattern, which is to show an error in the Command Log, pointing to the location of the error.
+
+## Typing Errors
+
+I don't think this should show in the Command Log *or* the AUT. Component Testing, and Cypress in general, is *not* a staic analysis tool. We tell you if you code does what is says it does, regarding rendering and interactions. We should leave typing errors to a the IDE or a separate `tsc` process. Most build tools have something built in to prevent you from compiling code with typing errors.
 
 
