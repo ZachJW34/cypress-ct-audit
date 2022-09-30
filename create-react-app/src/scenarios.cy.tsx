@@ -1,9 +1,9 @@
 import App from './App'
 
 describe('Scenarios', () => {
-  it("default", () => {
-    cy.mount(<App />);
-  });
+  // it("default", () => {
+  //   cy.mount(<App />);
+  // });
 
   // it('eslint warning', () => {
   //   if (1 === 1) {
@@ -35,8 +35,8 @@ describe('Scenarios', () => {
   //   cy.mount(<App />);
   // })
 
-  // it("runtime error in component", () => {
-  //   cy.mount(<App />);
-  //   cy.get('button').click();
-  // });
+  it("runtime error in component", () => {
+    cy.mount(<App />);
+    cy.get('button').click();
+  });
 })
