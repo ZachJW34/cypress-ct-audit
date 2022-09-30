@@ -8,7 +8,7 @@ Onboarding worked as expected - all the files were generated in the correct plac
 
 ## First Test
 
-I wrote a simple test for my component `<Greeter />`
+I wrote a simple test for my component `<Greeter />`:
 
 ```ts
 import { Component, OnInit } from '@angular/core';
@@ -47,9 +47,9 @@ describe('greeter.component.cy.ts', () => {
 Also works great. `cy.mount` has no squigglies - the types were found correctly (surprisingly; this is often not the case). The correct types for `describe` were also found (no conflict with Jest, etc - since Angular does not use Jest).
 
 
-## Errors
+# Errors
 
-### User App Error
+## User App Error
 
 I added some invalid code:
 
@@ -157,7 +157,7 @@ Error in overlay.
 
 ![](./e2e-1.png)
 
-# Conclusion
+# Analysis
 
 Broadly speaking, there are two classes of errors:
 
@@ -187,8 +187,12 @@ There is *three* places errors can manifest.
 
 I'd recommend following End to End Testing's current pattern, which is to show an error in the Command Log, pointing to the location of the error.
 
+I don't think the AUT is a good place for a compilation error. The Command Log (ala the Reporter) should report any problems, that's the whole point of it. I don't like it when test codes shows up in the AUT. It's supposed to be the production-like, and you don't show compilation errors in a big overlay in production.
+
 ## Typing Errors
 
 I don't think this should show in the Command Log *or* the AUT. Component Testing, and Cypress in general, is *not* a staic analysis tool. We tell you if you code does what is says it does, regarding rendering and interactions. We should leave typing errors to a the IDE or a separate `tsc` process. Most build tools have something built in to prevent you from compiling code with typing errors.
 
+# Conclusion
 
+Errors should be showing in the Command Log where possible, or in the console.error as a worst case scenario. They should not show in the AUT (regardless of whether they are related to typing, compilation, or linting).
