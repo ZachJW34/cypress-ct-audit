@@ -1,35 +1,34 @@
-import { AppComponent } from './app/app.component'
+import { AppComponent } from './app/app.component';
 
-describe("Scenarios", () => {
-  // it("default", () => {
-  //   cy.mount(AppComponent);
-  // });
+describe('Scenarios', () => {
+  it('default', () => {
+    cy.mount(AppComponent);
+  });
   // it('eslint warning', () => {
   //   5 + 5;
   //   cy.mount(AppComponent);
-  // })
-  // it("eslint error", () => {
-  //   let thing = "Hello World!";
+  // });
+  // it('eslint error', () => {
+  //   let thing = 'Hello World!';
   //   cy.mount(AppComponent);
   // });
   // it('typescript warning', () => {
-  //   let thing: number = 'Hello World'
+  //   let thing: number = 'Hello World';
   //   if (thing) {
   //     cy.mount(AppComponent);
   //   }
-  // })
+  // });
   // it('typescript error', () => {
   //   {}/()aa>
   //   cy.mount(AppComponent);
   // })
   // it('runtime error in spec', () => {
-  //   throw new Error('uh oh')
+  //   throw new Error('uh oh');
   //   cy.mount(AppComponent);
-  // })
-  // it("runtime error in component", () => {
+  // });
+  // it('runtime error in component', () => {
   //   cy.mount(AppComponent);
   //   cy.get('button').contains('Throw Error').click();
   //   // Error is not displayed in spec window
   // });
 });
-

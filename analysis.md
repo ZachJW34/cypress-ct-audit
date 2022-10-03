@@ -10,18 +10,31 @@ it("eslint warning", () => {
 ```
 
 **Cypress**
-| Framework | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Error needs to be resolved |
-| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :------------------------: |
-| create-react-app | x | | | | | |
+
+|    Framework     | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Test Failed |
+| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :---------: |
+|     angular      |              |             |                |            |                   |             |
+| create-react-app |      x       |             |                |            |                   |             |
+|       next       |              |             |                |            |                   |             |
+|       nuxt       |              |             |                |            |                   |             |
+|    react-vite    |              |             |                |            |                   |             |
+|     vue-cli      |              |             |                |            |                   |             |
 
 **App**
-| Framework | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Error needs to be resolved |
-| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :------------------------: |
-| create-react-app | x | | | | | |
+
+|    Framework     | Terminal Log | Console Log | DevServer Overlay |
+| :--------------: | :----------: | :---------: | :---------------: |
+|     angular      |              |             |                   |
+| create-react-app |      x       |             |                   |
+|       next       |              |             |                   |
+|       nuxt       |              |             |                   |
+|    react-vite    |              |             |                   |
+|     vue-cli      |              |             |                   |
 
 ### Summary
 
-`create-react-app` is the only framework that has ESLint integrated into the compilation. TODO: Make note of ENV variables that customize this behavior
+`create-react-app` is the only framework that has ESLint integrated into the compilation.
+TODO: Make note of ENV variables that customize this behavior
 
 - `create-react-app`
   > ![](./create-react-app-eslint-warning.png)
@@ -36,42 +49,35 @@ it("eslint error", () => {
 ```
 
 **Cypress**
-| Framework | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Error needs to be resolved |
-| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :------------------------: |
-| create-react-app | x | | | | | |
+
+|    Framework     | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Test Failed |
+| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :---------: |
+|     angular      |              |             |                |            |                   |             |
+| create-react-app |      x       |             |                |            |                   |             |
+|       next       |              |             |                |            |                   |             |
+|       nuxt       |              |             |                |            |                   |             |
+|    react-vite    |              |             |                |            |                   |             |
+|     vue-cli      |              |             |                |            |                   |             |
 
 **App**
-| Framework | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Error needs to be resolved |
-| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :------------------------: |
-| create-react-app | x | | | |x |x |
-| nuxt | x | | | | | |
+
+|    Framework     | Terminal Log | Console Log | DevServer Overlay |
+| :--------------: | :----------: | :---------: | :---------------: |
+|     angular      |              |             |                   |
+| create-react-app |      x       |             |         x         |
+|       next       |              |             |                   |
+|       nuxt       |              |             |                   |
+|    react-vite    |              |             |                   |
+|     vue-cli      |              |             |                   |
 
 ### Summary
-Create
+
+`create-react-app` is the only framework with eslint integrated in the compilation.
+TODO: Make note of ENV variables that customize this behavior
+TODO: create-react-app error needs to be resolved in app before hmr works
 
 - `create-react-app`
-
-  - Cypress: Terminal log
-  - In App: Terminal log, DevServer overlay, live-reload/hmr does not work until error is resolved
-    > ![](./create-react-app-eslint-error.png)
-
-- `create-next-app`: N/A ESLint is not integrated into Webpack build
-
-- `react-vite`: N/A not integrated into Vite build (opt-in)
-
-- `nuxt`
-
-  - Cypress: N/A ESLint is not integrated into Webpack build
-  - In App: Terminal Log
-
-- `vue-cli`
-
-  - Cypress: N/A ESLint is not integrated into Webpack build
-  - In App: N/A ESLint is not integrated into Webpack build
-
-- `Angular`
-  - Cypress: N/A ESLint is not integrated into build
-  - In App: N/A ESLint is not integrated into build
+  > ![](./create-react-app-eslint-error.png)
 
 ## Typescript Warning
 
@@ -84,53 +90,44 @@ it("typescript warning", () => {
 ```
 
 **Cypress**
-| Framework | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Error needs to be resolved |
-| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :------------------------: |
-| create-react-app | | | | | | |
-| next | | | | | | |
-| nuxt | | | | | | |
-| vue-cli | | | | | | |
-| angular | | | | | | |
-| react-vite | | | | | | |
+
+|    Framework     | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay |
+| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: |
+|     angular      |      x       |      x      |                |            |                   |
+| create-react-app |      x       |             |                |            |                   |
+|       next       |              |             |                |            |                   |
+|       nuxt       |      x       |      x      |                |            |                   |
+|    react-vite    |              |             |                |            |                   |
+|     vue-cli      |      x       |      x      |                |            |                   |
 
 **App**
-| Framework | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Error needs to be resolved |
-| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :------------------------: |
-| create-react-app | | | | | | |
-| next | | | | | | |
-| nuxt | | | | | | |
-| vue-cli | | | | | | |
-| angular | | | | | | |
-| react-vite | | | | | | |
+
+|    Framework     | Terminal Log | Console Log | DevServer Overlay |
+| :--------------: | :----------: | :---------: | :---------------: |
+|     angular      |      x       |      x      |         x         |
+| create-react-app |      x       |             |         x         |
+|       next       |              |             |                   |
+|       nuxt       |      x       |             |                   |
+|    react-vite    |              |             |                   |
+|     vue-cli      |      x       |             |         x         |
+
+- `angular`
+
+  > ![angular-typescript-warning](angular-typescript-warning.png)
 
 - `create-react-app`
 
-  - Cypress: Terminal log
-  - In App: Terminal log, DevServer overlay
-    > ![](./create-react-app-typescript-warning.png)
-
-- `create-next-app`: N/A Typecheck is not integrated into Webpack build
-
-- `react-vite`: N/A Typecheck is not integrated into Vite build (opt-in)
+  > ![](./create-react-app-typescript-warning.png)
 
 - `nuxt`
 
-  - Cypress: Terminal log, Console log
-  - In App: Terminal log
-    > ![nuxt-typescript-warning](nuxt-typescript-warning.png)
+  > ![nuxt-typescript-warning](nuxt-typescript-warning.png)
 
 - `vue-cli`
 
-  - Cypress: Terminal log, Console log
-  - In App: Terminal Log, Deverver overlay
-    > ![vue-cli-typescript-warning](vue-cli-typescript-warning.png)
+  > ![vue-cli-typescript-warning](vue-cli-typescript-warning.png)
 
-- `Angular`
-  - Cypress: Terminal log, Console log
-  - In App: Terminal log, DevServer overlay, live-reload/hmr does not work until error is resolved
-    > ![angular-typescript-warning](angular-typescript-warning.png)
-
-## Typescript Error
+## Typescript Error (Compilation Error)
 
 ```ts
 it('typescript error', () => {
@@ -141,115 +138,50 @@ it('typescript error', () => {
 ```
 
 **Cypress**
-| Framework | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Error needs to be resolved |
-| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :------------------------: |
-| create-react-app | | | | | | |
-| next | | | | | | |
-| nuxt | | | | | | |
-| vue-cli | | | | | | |
-| angular | | | | | | |
-| react-vite | | | | | | |
+
+|    Framework     | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Test Failed |
+| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :---------: |
+|     angular      |      x       |      x      |       x        |            |                   |      x      |
+| create-react-app |      x       |             |       x        |            |                   |      x      |
+|       next       |      x       |      x      |       x        |     x      |                   |      x      |
+|       nuxt       |      x       |      x      |       x        |            |                   |      x      |
+|    react-vite    |      x       |             |       x        |            |         x         |      x      |
+|     vue-cli      |      x       |      x      |       x        |            |                   |      x      |
 
 **App**
-| Framework | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Error needs to be resolved |
-| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :------------------------: |
-| create-react-app | | | | | | |
-| next | | | | | | |
-| nuxt | | | | | | |
-| vue-cli | | | | | | |
-| angular | | | | | | |
-| react-vite | | | | | | |
+
+|    Framework     | Terminal Log | Console Log | DevServer Overlay |
+| :--------------: | :----------: | :---------: | :---------------: |
+|     angular      |      x       |      x      |         x         |
+| create-react-app |      x       |             |         x         |
+|       next       |      x       |      x      |         x         |
+|       nuxt       |      x       |      x      |         x         |
+|    react-vite    |      x       |      x      |         x         |
+|     vue-cli      |      x       |             |         x         |
+
+- `angular`
+
+  > ![angular-typescript-error](angular-typescript-error.png)
 
 - `create-react-app`
 
-  - Cypress: Terminal log, failed test
-  - In App: Terminal log, DevServer overlay, live-reload/hmr does not work until error is resolved
-    > ![](./create-react-app-typescript-error.png)
+  > ![](./create-react-app-typescript-error.png)
 
-- `create-next-app`
+- `next`
 
-  - Cypress: Terminal log, Error in Reporter with stack frame, failed test
-  - In App: Terminal log, DevServer overlay, live-reload/hmr does not work until error is resolved
-    > ![](./create-next-app-typescript-error.png)
-
-- `react-vite`
-
-  - Cypress: Terminal log, Error in Reporter, DevServer overlay, failed test
-  - In App: Terminal log, DevServer overlay, live-reload/hmr does not work until error is resolved
-  - [](./react-vite-typescript-error.png)
+  > ![](./create-next-app-typescript-error.png)
 
 - `nuxt`
 
-  - Cypress: Terminal Log, Console Log, Reporter Log, Failed Test
-  - In App: Terminal Log, Devserver overlay, live-reload/hmr does not work until error is resolved
-    > ![nuxt-typescript-error](nuxt-typescript-error.png)
-
-- `vue-cli`
-  - Cypress: Terminal Log, Console Log, Reporter Log, Failed Test
-  - In App: Terminal log, Devserver overlay, live-reload/hmr does not work until error is resolved
-    > ![vue-cli-typescript-error](vue-cli-typescript-error.png)
-- `Angular`
-  - Cypress: Terminal Log, Console Log, Reporter Log, Failed Test
-  - In App: Terminal log, Devserver overlay, live-reload/hmr does not work until error is resolved
-    > ![angular-typescript-error](angular-typescript-error.png)
-
-## Runtime Error (Test)
-
-```ts
-it("runtime error in spec", () => {
-  throw new Error("uh oh");
-  cy.mount(<App />);
-});
-```
-
-**Cypress**
-| Framework | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Error needs to be resolved |
-| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :------------------------: |
-| create-react-app | | | | | | |
-| next | | | | | | |
-| nuxt | | | | | | |
-| vue-cli | | | | | | |
-| angular | | | | | | |
-| react-vite | | | | | | |
-
-**App**
-| Framework | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Error needs to be resolved |
-| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :------------------------: |
-| create-react-app | | | | | | |
-| next | | | | | | |
-| nuxt | | | | | | |
-| vue-cli | | | | | | |
-| angular | | | | | | |
-| react-vite | | | | | | |
-
-- `create-react-app`
-
-  - Cypress: Error in reporter with code-frame, live-reload/hmr does not work until error is resolved, failed test
-    > ![](./create-react-app-runtime-error-test.png)
-
-- `create-next-app`
-
-  - Cypress: Terminal log, Error in Reporter with stack frame, failed test
-    > ![](./create-next-app-runtime-error-test.png)
+  > ![nuxt-typescript-error](nuxt-typescript-error.png)
 
 - `react-vite`
 
-  - Cypress: Terminal log, Error in Reporter with stack frame, DevServer overlay, failed test
-    > ![](./react-vite-runtime-error-test.png)
-
-- `nuxt`
-
-  - Cypress: Error in reporter with code-frame, live-reload/hmr does not work until error is resolved, failed test
-    > ![nuxt-runtime-error-spec](nuxt-runtime-error-spec.png)
+  > ![](./react-vite-typescript-error.png)
 
 - `vue-cli`
 
-  - Cypress: Error in reporter with code-frame, live-reload/hmr does not work until error is resolved, failed test
-    > ![vue-cli-runtime-error-spec](vue-cli-runtime-error-spec.png)
-
-- `Angular`
-  - Cypress: Error in reporter with code-frame, live-reload/hmr does not work until error is resolved, failed test
-    > ![angular-runtime-error-spec](angular-runtime-error-spec.png)
+  > ![vue-cli-typescript-error](vue-cli-typescript-error.png)
 
 ## Runtime Error (App)
 
@@ -261,55 +193,91 @@ it("runtime error in component", () => {
 ```
 
 **Cypress**
-| Framework | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Error needs to be resolved |
-| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :------------------------: |
-| create-react-app | | | | | | |
-| next | | | | | | |
-| nuxt | | | | | | |
-| vue-cli | | | | | | |
-| angular | | | | | | |
-| react-vite | | | | | | |
+
+|    Framework     | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Test Failed |
+| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :---------: |
+|     angular      |              |      x      |                |            |                   |             |
+| create-react-app |              |      x      |       x        |     x      |                   |      x      |
+|       next       |              |      x      |       x        |     x      |                   |      x      |
+|       nuxt       |              |      x      |                |            |                   |             |
+|    react-vite    |              |      x      |       x        |            |                   |      x      |
+|     vue-cli      |              |      x      |       x        |    x\*     |                   |      x      |
 
 **App**
-| Framework | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Error needs to be resolved |
-| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :------------------------: |
-| create-react-app | | | | | | |
-| next | | | | | | |
-| nuxt | | | | | | |
-| vue-cli | | | | | | |
-| angular | | | | | | |
-| react-vite | | | | | | |
+
+|    Framework     | Terminal Log | Console Log | DevServer Overlay |
+| :--------------: | :----------: | :---------: | :---------------: |
+|     angular      |              |      x      |                   |
+| create-react-app |              |      x      |                   |
+|       next       |              |      x      |         x         |
+|       nuxt       |              |      x      |        x\*        |
+|    react-vite    |              |      x      |                   |
+|     vue-cli      |              |      x      |                   |
+
+- `angular`
+
+  > ![angular-runtime-error-app](angular-runtime-error-app.png)
 
 - `create-react-app`
 
-  - Cypress: Console log, Error in reporter with code-frame, failed test
-  - In App: Console log
-    > ![](./create-react-app-runtime-error-app.png)
+  > ![](./create-react-app-runtime-error-app.png)
 
-- `create-next-app`
+- `next`
 
-  - Cypress: Terminal log, Error in Reporter with stack frame, failed test
-  - In App: Console log, DevServer overlay
-    > ![](./create-next-app-runtime-error-app.png)
-
-- `react-vite`
-
-  - Cypress: Console log, Error in reporter, failed test
-  - In App: Console log
+  > ![](./create-next-app-runtime-error-app.png)
 
 - `nuxt`
 
-  - Cypress: Console Log, Test Passes
-  - In App: DevServer Overlay, Console Log
-    > ![nuxt-runtime-error-app](nuxt-runtime-error-app.png)
+  > ![nuxt-runtime-error-app](nuxt-runtime-error-app.png)
+
+- `react-vite`
+
+  > ![](./react-vite-runtime-error-app.png)
 
 - `vue-cli`
 
-  - Cypress: Console Log, Error in reporter with code-frame, Test Passes
-  - In App: Console Log
-    > ![vue-cli-runtime-error-app](vue-cli-runtime-error-app.png)
+  > ![vue-cli-runtime-error-app](vue-cli-runtime-error-app.png)
 
-- `Angular`
-  - Cypress: Console Log Test Passes
-  - In App: Console Log
-    > ![angular-runtime-error-app](angular-runtime-error-app.png)
+## Runtime Error (Test)
+
+```ts
+it("runtime error in spec", () => {
+  throw new Error("uh oh");
+  cy.mount(<App />);
+});
+```
+
+**Cypress**
+
+|    Framework     | Terminal Log | Console Log | Reporter Error | Code Frame | DevServer Overlay | Test Failed |
+| :--------------: | :----------: | :---------: | :------------: | :--------: | :---------------: | :---------: |
+|     angular      |              |             |       x        |     x      |                   |      x      |
+| create-react-app |              |             |       x        |     x      |                   |      x      |
+|       next       |              |             |       x        |     x      |                   |      x      |
+|       nuxt       |              |             |       x        |     x      |                   |      x      |
+|    react-vite    |              |             |       x        |     x      |                   |      x      |
+|     vue-cli      |              |             |       x        |     x      |                   |      x      |
+
+- `angular`
+
+  > ![angular-runtime-error-spec](angular-runtime-error-spec.png)
+
+- `create-react-app`
+
+  > ![](./create-react-app-runtime-error-test.png)
+
+- `next`
+
+  > ![](./create-next-app-runtime-error-test.png)
+
+- `nuxt`
+
+  > ![nuxt-runtime-error-spec](nuxt-runtime-error-spec.png)
+
+- `react-vite`
+
+  > ![](./react-vite-runtime-error-test.png)
+
+- `vue-cli`
+
+  > ![vue-cli-runtime-error-spec](vue-cli-runtime-error-spec.png)

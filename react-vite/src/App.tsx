@@ -1,12 +1,11 @@
-import logo from './logo.svg'
-import './App.css'
+import logo from "./logo.svg";
+import "./App.css";
 
 function throwError() {
-  throw new Error('uh oh')
+  throw new Error("uh oh");
 }
 
 function App() {
-
   return (
     <div className="App">
       <header className="App-header">
@@ -29,7 +28,7 @@ function App() {
           >
             Learn React
           </a>
-          {' | '}
+          {" | "}
           <a
             className="App-link"
             href="https://vitejs.dev/guide/features.html"
@@ -41,7 +40,7 @@ function App() {
         </p>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

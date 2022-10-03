@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular';
+  title = 'angular!';
 
   public throwError() {
-    throw new Error('uh oh')
+    throw new Error('uh oh');
   }
 }

@@ -6,18 +6,18 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Tutorial from '~/components/Tutorial.vue'
+import Vue from "vue";
+import Tutorial from "~/components/Tutorial.vue";
 
 export default Vue.extend({
-  name: 'IndexPage',
+  name: "IndexPage",
   components: {
-    Tutorial
+    Tutorial,
   },
   methods: {
-    throwError () {
-      throw new Error('Uh Oh')
-    }
-  }
-})
+    throwError() {
+      throw new Error("Uh Oh");
+    },
+  },
+});
 </script>

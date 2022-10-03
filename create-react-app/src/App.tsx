@@ -1,9 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function throwError() {
-  throw new Error('uh oh')
+  throw new Error("uh oh");
 }
 
 function App() {
