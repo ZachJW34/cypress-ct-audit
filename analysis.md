@@ -281,3 +281,17 @@ it("runtime error in spec", () => {
 - `vue-cli`
 
   > ![vue-cli-runtime-error-spec](vue-cli-runtime-error-spec.png)
+
+# Onboarding
+
+## Nuxt
+
+Nuxt's on-boarding experience did not have any configuration issues. Typescript and ESLint configurations did not need modified.
+It was able to utilize Create Spec from Vue Component.
+
+The issues experienced during the on-boarding experience were:
+1. Page shows component name in the command log as `<f .../>` instead of the component name (See nuxt screenshots above)
+2. When hovering over `Mount` in the command log, the AUT shows a blank view. This should probably display the mounted component
+3. The user has to add any children component into the `components` object in the exported object. This is not required when running the app in dev mode.
+
+
