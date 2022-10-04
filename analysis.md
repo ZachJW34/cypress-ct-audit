@@ -284,14 +284,34 @@ it("runtime error in spec", () => {
 
 # Onboarding
 
-## Nuxt
+
+General Issues:
+1. When hovering over `Mount` in the command log, the AUT shows a blank view. This should probably display the mounted component
+
+## `nuxt`
 
 Nuxt's on-boarding experience did not have any configuration issues. Typescript and ESLint configurations did not need modified.
 It was able to utilize Create Spec from Vue Component.
 
 The issues experienced during the on-boarding experience were:
 1. Page shows component name in the command log as `<f .../>` instead of the component name (See nuxt screenshots above)
-2. When hovering over `Mount` in the command log, the AUT shows a blank view. This should probably display the mounted component
-3. The user has to add any children component into the `components` object in the exported object. This is not required when running the app in dev mode.
+2. The user has to add any children component into the `components` object in the exported object. This is not required when running the app in dev mode.
+
+## `vue-cli`
+
+Vue cli's on-boarding experience had a couple steps to get eslint and typescript happy. Typescript config needed to be updated for TS projects
+by adding the cypress config to the `tsconfig.json` file. ESLint config needed to be updated for non typscript projects by adding the
+`eslint-cypress-plugin` library.
+
+## `next`
+
+Next's on-boarding experience did not have any configuration issues. Tests ran as expected on the 
+first attempt.
+
+## `angular`
+
+I did `npm install -g @angular/cli`. I made a new app and a simple component - works great. I included SCSS and Routing.
+
+Onboarding worked as expected - all the files were generated in the correct places.
 
 
