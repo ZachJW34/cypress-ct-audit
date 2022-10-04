@@ -288,6 +288,12 @@ it("runtime error in spec", () => {
 General Issues:
 1. When hovering over `Mount` in the command log, the AUT shows a blank view. This should probably display the mounted component
 
+## `angular`
+
+I did `npm install -g @angular/cli`. I made a new app and a simple component - works great. I included SCSS and Routing.
+
+On-boarding worked as expected - all the files were generated in the correct places.
+
 ## `nuxt`
 
 Nuxt's on-boarding experience did not have any configuration issues. Typescript and ESLint configurations did not need modified.
@@ -305,13 +311,22 @@ by adding the cypress config to the `tsconfig.json` file. ESLint config needed t
 
 ## `next`
 
-Next's on-boarding experience did not have any configuration issues. Tests ran as expected on the 
+### `create-next-app`
+On-boarding Next using vanilla js did not have any configuration issues. Tests ran as expected on the 
 first attempt.
 
-## `angular`
+### `create-next-app --typescript`
+`create-next-app` using typescript requires `export {}` to be added to commands.ts due to the tsconfig `isolatedModules` flag.
 
-I did `npm install -g @angular/cli`. I made a new app and a simple component - works great. I included SCSS and Routing.
+## `react
 
-Onboarding worked as expected - all the files were generated in the correct places.
+## `create-react-app`
+On-boarding React using vanilla js did not have any configuration issues. Tests ran as expected on the
+first attempt.
+
+## `create-react-app --typescript`
+On-boarding React using typescript needed to add `export {}` to commands.ts due to the tsconfig `isolatedModules` flag.
+IDEs are not happy with jest + cypress testing. This may require
+reorganization and configuration changes if you need to keep existing jest tests in your project
 
 
