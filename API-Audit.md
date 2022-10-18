@@ -24,12 +24,44 @@ MountCallback(component: VueComponent, options?: MountOptionsArgument) => () => 
 ```
 
 ### Log
+The log does not show the correct component name for Nuxt Pages. It shows as `<f .../>`
 
 ### Mount Cleanup Strategy
+Vue3
+```ts
+// unmount if Vuewrapper
+// Empty container element
+Cypress.on('test:before:run', () => {
+Cypress.vueWrapper?.unmount()
+const el = getContainerEl()
+
+el.innerHTML = ''
+})
+```
+
+Vue2
+```ts
+// Uses @vue/test-utils auto destroy
+Cypress.on('test:before:run', () => {
+  $destroy()
+})
+```
 
 ### Mount Multiple Components
 
+When Multiple components are mounted, the first component shows, but both exist in the DOM
+
 ### Type Intellisense
+
+Types seem ok on Vue2, but Vue3 has poor typing for the Component parameter
+
+```ts
+originalComponent: {
+  new (...args: any[]): V
+  __vccOpts: any
+  defaultProps?: Record<string, Prop<any>> | string[]
+},
+```
 
 ## Angular
 
@@ -50,6 +82,8 @@ JS Doc ✅
 ## React / React18 / Next
 
 JS Doc ❌
+
+Mount is aliased to the derived component name in createMount
 
 ### Signature
 
