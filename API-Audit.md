@@ -20,7 +20,7 @@
 - Suggest we remove ability to provide styles in the mount function. Prefer index.html and import in commands, etc.
 - Suggest we remove the aliasing of component name in React mount logic
 - Suggest to unmount any mounted component before mounting a new component in a test. Prevents multiple components from being mounted in frameworks that support this.
-- Should we move the unmount to an afterEach hook instead of beforeEach
+- Should we move the unmount to the `test:after:run` hook instead of `test:before:run`hook
 - Component name for Nuxt page is incorrect see [issue here](https://github.com/cypress-io/cypress/issues/24140)
 
 ## Vue/Nuxt:
