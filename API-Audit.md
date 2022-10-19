@@ -22,7 +22,7 @@
 - Suggest to unmount any mounted component before mounting a new component in a test. Prevents multiple components from being mounted in frameworks that support this.
 - Should we move the unmount to the `test:after:run` hook instead of `test:before:run`hook
 - Component name for Nuxt page is incorrect see [issue here](https://github.com/cypress-io/cypress/issues/24140)
-
+- Sure up the naming of the options prop that the mount functions have. 
 ## Vue/Nuxt:
 
 
