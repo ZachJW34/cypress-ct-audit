@@ -12,12 +12,23 @@
 - Consider wrapping the test utils lib vs passing directly to it
 - Should we be wrapping testbed
 
+
+
+### Things to do before GA
+- We should add JS docs to frameworks missing them
+- Suggest we remove mountCallback from Vue
+- Suggest we remove ability to provide styles in the mount function. Prefer index.html and import in commands, etc.
+- Suggest we remove the aliasing of component name in React mount logic
+- Suggest to unmount any mounted component before mounting a new component in a test. Prevents multiple components from being mounted in frameworks that support this.
+- Should we move the unmount to an afterEach hook instead of beforeEach
+- Component name for Nuxt page is incorrect see [issue here](https://github.com/cypress-io/cypress/issues/24140)
+
 ## Vue/Nuxt:
 
 
 JS Doc ❌
 
-### Signature
+### API Signatures
 ```ts
 Mount(Component: VueComponent, optionsOrProps?: MountOptionsArgument) => Cypress.Chainable<Cypress.AUTWindow>
 MountCallback(component: VueComponent, options?: MountOptionsArgument) => () => Cypress.Chainable<Cypress.AUTWindow>
@@ -85,15 +96,33 @@ JS Doc ❌
 
 Mount is aliased to the derived component name in createMount
 
-### Signature
+### API Signatures
+```ts
+mount(jsx: React.ReactNode, options?: MountOptions, rerenderKey?: string): Cypress.Chainable<MountReturn>;
+unmount(options?: UnmountArgs): Cypress.Chainable<undefined>;
+```
+
+Do we need a rerenderKey? This seems like an implementation detail that adds unnecessary complexity and shouldn't be exposed to the user.
 
 ### Log
 
+The mount log shows the component name properly
+`mount <ComponentName .../>`
+
 ### Mount Cleanup Strategy
+
+Calls React's provided unmount
 
 ### Mount Multiple Components
 
+Both mounts succeed Only the second component is present in the dom
+
 ### Type Intellisense
+
+Typing seems good. There is a weird error when you pass the mount an object vs JSX
+`Cannot read properties of undefined (reading 'displayName')`. 
+
+⚠️ This is indicated in IDE when using Typescript, but the error in the reported is confusing regardless. Should this even be thrown?
 
 ## Svelte 
 
